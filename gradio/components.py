@@ -3229,6 +3229,7 @@ class Gallery(IOComponent):
         """
         Parameters:
             value: List of images to display in the gallery by default. If callable, the function will be called whenever the app loads to set the initial value of the component.
+            lazy_load: lazy load the images using the loading=lazy HTML tag
             label: component name in interface.
             show_label: if True, will display label.
             visible: If False, component will be hidden.

@@ -164,7 +164,6 @@
 							<img
 								alt=""
 								class="h-full w-full overflow-hidden object-contain"
-								,
 								loading={lazy_load ? "lazy" : "eager"}
 								src={image}
 							/>
