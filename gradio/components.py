@@ -3219,6 +3219,7 @@ class Gallery(IOComponent):
         self,
         value: Optional[List[np.ndarray | PIL.Image | str] | Callable] = None,
         *,
+        lazy_load: Optional[bool] = False,
         label: Optional[str] = None,
         show_label: bool = True,
         visible: bool = True,
@@ -3234,6 +3235,7 @@ class Gallery(IOComponent):
             elem_id: An optional string that is assigned as the id of this component in the HTML DOM. Can be used for targeting CSS styles.
         """
         super().__init__(
+            lazy_load=lazy_load,
             label=label,
             show_label=show_label,
             visible=visible,

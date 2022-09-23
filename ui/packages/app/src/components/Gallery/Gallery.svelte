@@ -10,6 +10,7 @@
 	import { _ } from "svelte-i18n";
 
 	export let loading_status: LoadingStatus;
+	export let lazy_load: boolean;
 	export let show_label: boolean;
 	export let label: string;
 	export let elem_id: string = "";
@@ -133,6 +134,7 @@
 							<img
 								alt=""
 								class="h-full w-full overflow-hidden object-contain"
+								loading={lazy_load ? "lazy" : "eager"}
 								src={image}
 							/>
 						</button>
@@ -162,6 +164,8 @@
 							<img
 								alt=""
 								class="h-full w-full overflow-hidden object-contain"
+								,
+								loading={lazy_load ? "lazy" : "eager"}
 								src={image}
 							/>
 						</button>
